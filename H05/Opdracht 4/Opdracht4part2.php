@@ -4,14 +4,16 @@ $emails = [
     "klaas@carpets.nl" => "snoepje777",
     "truushendriks@wegweg.nl" => "arkiearkie201"
 ];
-$sorry = true;
+
+$account = false;
 foreach ($emails as $key => $value) {
-    if ($_POST['email'] == $key) {
+    if ($_POST['email'] == $key && $_POST['password'] == $value) {
         echo "Welkom";
-    } else {
-        if ($sorry) {
-            echo "Sorry, geen toegang!";
-            $sorry = false;
-        }
+        $account = true;
+        break;
     }
+}
+
+if (!$account) {
+    echo "Sorry, geen toegang";
 }
