@@ -1,22 +1,16 @@
 <?php
-$emails = [
+$logins = [
     "piet@worldonline.nl" => "doetje123",
     "klaas@carpets.nl" => "snoepje777",
     "truushendriks@wegweg.nl" => "arkiearkie201"
 ];
-$sorry = true;
-foreach ($emails as $key => $value) {
-    if ($_POST['email'] == $key) {
-        if ($_POST['password'] == $value) {
-            echo "Welkom";
-        }
-    } else {
-        if ($sorry) {
-            echo "Sorry, geen toegang!";
-            $sorry = false;
-        }
-    }
-}
-function checkLogin($key, $value) {
 
+checkCorrectLogin($_POST['email'], $_POST['password'], $logins);
+
+function checkCorrectLogin($emailUser, $password, $logins){
+    if(array_key_exists($emailUser, $logins) && $logins[$emailUser] === $password){
+        echo "Welkom";
+    } else {
+        echo "Sorry, geen toegang";
+    }
 }
