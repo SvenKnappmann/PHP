@@ -1,9 +1,4 @@
 <?php
-//$logins = [
-//    "piet@worldonline.nl" => "doetje123",
-//    "klaas@carpets.nl" => "snoepje777",
-//    "truushendriks@wegweg.nl" => "arkiearkie201"
-//];
 
 $host = 'localhost';
 $port = '3306';
