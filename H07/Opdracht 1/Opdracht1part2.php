@@ -20,9 +20,9 @@ if ($loginResult) {
     $_SESSION["userId"] = $loginResult["id"];
     $_SESSION["userRole"] = $loginResult["rol"];
 } else {
-    echo "Sorry, geen toegang";
-    $_SESSION["noLogin"] = "true";
     header("Location: ./Opdracht1.php");
+    $_SESSION["noLogin"] = "true";
+
 }
 
 if ($_SESSION["userRole"] === "admin") {
