@@ -34,7 +34,7 @@ for ($i = 1; $i <= 5; $i++) {
 <a href="H07/Opdracht%201/Opdracht1.php">Opdracht.01</a><br>
 <h2>Verdieping</h2>
 <h3>Hoofdstuk.08</h3>
-<a href="H08/Opdracht%201">Opdracht.01</a>
+<a href="H08/Opdracht%201/index.php">Opdracht.01</a>
 <h1>Reflectie</h1>
 <a href="ref/ref.php">001</a>
 </body>
